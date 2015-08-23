@@ -43,7 +43,7 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(cache_value)
         }
-        # calculate inverse if not available
+        # calculate inverse if not available in cache
         data <- x$get()
         cache_value<- solve(data, ...)
         x$setinv(cache_value)
